@@ -1,29 +1,26 @@
-Code Book
-This code book includes information about the source data, the transformations performed after collecting the data and some information about the variables of the resulting data sets.
+This Code Book describe the variables, the data, and any transformations or work that you performed to clean up the data.
 
-Study Design
+DATASET INFO: Human Activity Recognition database built from the recordings of 30 subjects performing activities of daily living (ADL) while carrying a waist-mounted smartphone with embedded inertial sensors.
 
-The source data was collected from the UCI Machine Learning Repository to complete an assignment for a Coursera course named Getting and Cleaning Data instructed by Jeff Leek. The assignment involved working with the data set and producing tidy data representation of the source data. Below is a list of the operations done to achieve the outputs.
+CLEANING UP OF DATASET: 
+1.Merges the training and the test sets to create one data set.
+2.Extracts only the measurements on the mean and standard deviation for each measurement. 
+3.Uses descriptive activity names to name the activities in the data set
+4.Appropriately labels the data set with descriptive variable names. 
+5.From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject
 
-Downloaded the data set
-Unzipped the data set into my chosen working directory
-Loaded test and training data sets into data frames
-Loaded source variable names for test and training data sets
-Loaded activity labels
-Combined test and training data frames using rbind
-Paired down the data frames to only include the mean and standard deviation variables
-Replaced activity IDs with the activity labels for readability
-Combined the data frames to produce one data frame containing the subjects, measurements and activities
-Produced "merged_tidy_data.txt" with the combined data frame as the first expected output
-Created another data set using the data.table library to easily group the tidy data by subject and activity
-Then applied the mean and standard deviation calculations across the groups
-Produced "calculated_tidy_data.txt" as the second expected output
-Please refer to run_analysis.R for implementation details.
 
-Variables
+Subject: 1 to 30 each representing a participant in the study
 
-subjectId: 1 to 30 each representing a participant in the study
-activity: the activity that the subject was doing at the time of the measurement
+Activity: the activity that the subject was doing at the time of the measurement
+1 WALKING
+2 WALKING_UPSTAIRS
+3 WALKING_DOWNSTAIRS
+4 SITTING
+5 STANDING
+6 LAYING
+
+Variables:
 tBodyAcc-mean-X
 tBodyAcc-mean-Y
 tBodyAcc-mean-Z
